@@ -24,7 +24,11 @@ app.get('/', (req, res) => {
     res.redirect('/home')
 })
 
-app.get('/home', (req, res) => {
-    res.render('pages/index');
+app.get('/home', async (req, res) => {
+    try {
+        res.render('pages/index');
+    }
+    catch(e) {
+        throw new Error ("ERROR");    }
 })
 
