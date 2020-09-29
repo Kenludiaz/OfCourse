@@ -1,14 +1,30 @@
 const { text } = require('express');
 const express = require('express');
-const app = express();
+const ejs = require('ejs');
 
+
+const app = express();
 const port = ( process.env.PORT || 5000);
+
+app.set('view engine', 'ejs');
+
+
+
+
+
+
+app.use(express.static('public'));
 
 app.listen(port, () => {
     console.log(`Listening at port ${port}.`)
 })
 
 app.get('/', (req, res) => {
-    res.send("Success, Got Route!!!");
+    console.log("Redirecting to home.")
+    res.redirect('/home')
+})
+
+app.get('/home', (req, res) => {
+    res.render('pages/index');
 })
 
