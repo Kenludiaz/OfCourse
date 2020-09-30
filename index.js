@@ -1,15 +1,13 @@
-const { text } = require('express');
 const express = require('express');
 const ejs = require('ejs');
-
+const mongoose = require("mongoose");
 
 const app = express();
 const port = ( process.env.PORT || 5000);
 
 app.set('view engine', 'ejs');
 
-
-
+let mongodb = "mongodb+srv://Ken:Ken@cluster0.lcalo.mongodb.net/?retryWrites=true&w=majority"
 
 
 
