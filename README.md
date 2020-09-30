@@ -1,3 +1,3 @@
 # OfCourse
 
-This is a crud application utilizing Express, EJS and MongoDB.
+This is a CRUD application utilizing Express, EJS and MongoDB.
